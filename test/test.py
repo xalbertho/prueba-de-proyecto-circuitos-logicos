@@ -8,20 +8,29 @@ from cocotb.triggers import ClockCycles
 
 @cocotb.test()
 async def test_project(dut):
-    dut._log.info("Start")
+    dut._log.info("Smoke test start")
 
+    # Clock (puede ser 10 us o más rápido, da igual para el smoke)
     clock = Clock(dut.clk, 10, unit="us")
     cocotb.start_soon(clock.start())
 
-    dut._log.info("Reset")
+    # Init inputs
     dut.ena.value = 1
     dut.ui_in.value = 0
     dut.uio_in.value = 0
+
+    # Reset
     dut.rst_n.value = 0
     await ClockCycles(dut.clk, 10)
     dut.rst_n.value = 1
+    await ClockCycles(dut.clk, 10)
 
-    dut._log.info("Run a bit")
-    await ClockCycles(dut.clk, 50)
+    # Opcional: “picar” el botón reset en ui_in[0] si tu wrapper lo usa
+    # (si NO lo usas, esto no hace daño)
+    dut.ui_in.value = 1  # presiona
+    await ClockCycles(dut.clk, 2)
+    dut.ui_in.value = 0  # suelta
+    await ClockCycles(dut.clk, 20)
 
-    dut._log.info("Smoke test passed")
+    # Si llegamos aquí sin excepciones, el test PASA y cocotb genera results.xml
+    dut._log.info("Smoke test done")
