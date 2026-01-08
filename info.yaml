@@ -22,6 +22,7 @@ source_files:
   - src/counter8_4hz.v
   - src/bin8_to_bcd3.v
   - src/sevenseg_mux4_ca.v
+  - src/sevenseg_decoder_ca.v
 
 #top_module: tt_um_alberto_counter255_7seg
 
