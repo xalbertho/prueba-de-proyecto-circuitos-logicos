@@ -4,7 +4,11 @@
 # defaults
 SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
-TOPLEVEL_LANG ?= verilog
+
+
+TOPLEVEL = tt_um_alberto_counter255_7seg
+MODULE   = test
+#TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = project.v
 
