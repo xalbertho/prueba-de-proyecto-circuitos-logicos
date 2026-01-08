@@ -10,12 +10,12 @@ project:
 
   # OJO: source_files va DENTRO de project
   source_files:
-    - src/tt_um_alberto_counter255_7seg.v
-    - src/tld_contador_0_255_ca.v
-    - src/counter8_4hz.v
-    - src/bin8_to_bcd3.v
-    - src/sevenseg_mux4_ca.v
-    - src/sevenseg_decoder_ca.v
+    - "tt_um_alberto_counter255_7seg.v"
+    - "tld_contador_0_255_ca.v"
+    - "counter8_4hz.v"
+    - "bin8_to_bcd3.v"
+    - "sevenseg_mux4_ca.v"
+    - "sevenseg_decoder_ca.v"
 
 # Pinout (no borres ni agregues pines)
 pinout:
