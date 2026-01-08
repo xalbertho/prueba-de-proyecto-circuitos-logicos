@@ -1,5 +1,5 @@
 project:
-  title:        "7 contador"
+  title:        "7 contacasasdor"
   author:       "albertoo"
   discord:      ""
   description:  "Contador 0-255 en 7 segmentos CA con reset"
