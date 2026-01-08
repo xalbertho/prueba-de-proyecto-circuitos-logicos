@@ -6,7 +6,7 @@ project:
   language:     "Verilog"
   clock_hz:     50000000
   tiles:        "1x1"
-  top_module:   tt_um_alberto_counter255_7seg.v
+  top_module:   src/tt_um_alberto_counter255_7seg.v
 
   # OJO: source_files va DENTRO de project
   source_files:
