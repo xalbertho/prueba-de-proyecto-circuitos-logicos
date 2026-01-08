@@ -16,8 +16,15 @@ project:
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
-  source_files:
-    - "project.v"
+source_files:
+  - src/tt_um_alberto_counter255_7seg.v
+  - src/tld_contador_0_255_ca.v
+  - src/counter8_4hz.v
+  - src/bin8_to_bcd3.v
+  - src/sevenseg_mux4_ca.v
+
+top_module: tt_um_alberto_counter255_7seg
+
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
